@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>International Student Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                🌏 International Student Hub
+            </div>
+
+            <div class="nav-links">
+
+                <a href="#home">Home</a>
+
+                <a href="#student-info">
+                    Student Info
+                </a>
+
+                <a href="#language">
+                    Language Assistant
+                </a>
+
+                <a href="#ai">
+                    AI Assistant
+                </a>
+
+                <button onclick="openLogin()">
+                    Login
+                </button>
+
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- ================= HOME ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-text">
+
+                <p class="small-title">
+                    WELCOME TO
+                </p>
+
+                <h1>
+                    International<br>
+                    Student Hub
+                </h1>
+
+                <p>
+                    A simple platform designed to help
+                    international students study,
+                    communicate, and live more easily
+                    in South Korea.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button
+                        onclick="scrollToSection('student-info')"
+                        class="primary-btn">
+                        Explore Student Info
+                    </button>
+
+                    <button
+                        onclick="scrollToSection('language')"
+                        class="secondary-btn">
+                        Language Assistant
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Welcome Card -->
+
+            <div class="hero-card">
+
+                <div class="welcome-icon">
+                    🌏
+                </div>
+
+                <h3>
+                    Your Student Companion
+                </h3>
+
+                <p>
+                    Find useful information and assistance
+                    in one convenient place.
+                </p>
+
+                <div class="quick-items">
+
+                    <div>
+                        🎓 University
+                    </div>
+
+                    <div>
+                        💼 Work
+                    </div>
+
+                    <div>
+                        🏠 Housing
+                    </div>
+
+                    <div>
+                        🤖 AI Assistant
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= STUDENT INFO ================= -->
+
+    <section id="student-info" class="section">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                STUDENT INFORMATION
+            </p>
+
+            <h2>
+                Everything you need<br>
+                in one place
+            </h2>
+
+            <p>
+                Explore useful information for studying
+                and everyday life in South Korea.
+            </p>
+
+        </div>
+
+
+        <div class="info-grid">
+
+
+            <!-- University -->
+
+            <div
+                class="info-card"
+                onclick="showInfo('university')">
+
+                <div class="card-icon">
+                    🎓
+                </div>
+
+                <h3>
+                    University
+                </h3>
+
+                <p>
+                    Academic information, campus services,
+                    and useful student resources.
+                </p>
+
+                <span>
+                    Explore →
+                </span>
+
+            </div>
+
+
+            <!-- Work -->
+
+            <div
+                class="info-card"
+                onclick="showInfo('work')">
+
+                <div class="card-icon">
+                    💼
+                </div>
+
+                <h3>
+                    Work
+                </h3>
+
+                <p>
+                    Useful information for international
+                    students looking for part-time work.
+                </p>
+
+                <span>
+                    Explore →
+                </span>
+
+            </div>
+
+
+            <!-- Housing -->
+
+            <div
+                class="info-card"
+                onclick="showInfo('housing')">
+
+                <div class="card-icon">
+                    🏠
+                </div>
+
+                <h3>
+                    Housing
+                </h3>
+
+                <p>
+                    Basic information about finding
+                    and managing accommodation.
+                </p>
+
+                <span>
+                    Explore →
+                </span>
+
+            </div>
+
+
+            <!-- Restaurant -->
+
+            <div
+                class="info-card"
+                onclick="showInfo('restaurant')">
+
+                <div class="card-icon">
+                    🍽️
+                </div>
+
+                <h3>
+                    Restaurant
+                </h3>
+
+                <p>
+                    Useful restaurant information
+                    and communication situations.
+                </p>
+
+                <span>
+                    Explore →
+                </span>
+
+            </div>
+
+
+            <!-- Hospital -->
+
+            <div
+                class="info-card"
+                onclick="showInfo('hospital')">
+
+                <div class="card-icon">
+                    🏥
+                </div>
+
+                <h3>
+                    Hospital
+                </h3>
+
+                <p>
+                    Helpful information for communicating
+                    during healthcare situations.
+                </p>
+
+                <span>
+                    Explore →
+                </span>
+
+            </div>
+
+
+            <!-- Bank -->
+
+            <div
+                class="info-card"
+                onclick="showInfo('bank')">
+
+                <div class="card-icon">
+                    🏦
+                </div>
+
+                <h3>
+                    Bank
+                </h3>
+
+                <p>
+                    Common banking situations and
+                    useful information.
+                </p>
+
+                <span>
+                    Explore →
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= LANGUAGE ASSISTANT ================= -->
+
+    <section
+        id="language"
+        class="section language-section">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                LANGUAGE ASSISTANT
+            </p>
+
+            <h2>
+                Communicate with<br>
+                more confidence
+            </h2>
+
+            <p>
+                Select a situation and find useful
+                expressions for everyday communication.
+            </p>
+
+        </div>
+
+
+        <div class="language-container">
+
+
+            <!-- Categories -->
+
+            <div class="category-list">
+
+                <button
+                    onclick="selectCategory('University')">
+                    🎓 University
+                </button>
+
+                <button
+                    onclick="selectCategory('Restaurant')">
+                    🍽️ Restaurant
+                </button>
+
+                <button
+                    onclick="selectCategory('Workplace')">
+                    💼 Workplace
+                </button>
+
+                <button
+                    onclick="selectCategory('Housing')">
+                    🏠 Housing
+                </button>
+
+                <button
+                    onclick="selectCategory('Hospital')">
+                    🏥 Hospital
+                </button>
+
+                <button
+                    onclick="selectCategory('Bank')">
+                    🏦 Bank
+                </button>
+
+            </div>
+
+
+            <!-- Phrase Display -->
+
+            <div class="phrase-box">
+
+                <p class="selected-label">
+                    SELECT A SITUATION
+                </p>
+
+                <h3 id="category-title">
+                    Choose a category
+                </h3>
+
+                <div id="phrase-content">
+
+                    <p>
+                        Select one of the categories
+                        to see useful expressions.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= AI ASSISTANT ================= -->
+
+    <section id="ai" class="section">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                AI ASSISTANT
+            </p>
+
+            <h2>
+                Need some help?
+            </h2>
+
+            <p>
+                Ask questions about studying and
+                everyday life in South Korea.
+            </p>
+
+        </div>
+
+
+        <div class="chat-container">
+
+
+            <!-- Chat Header -->
+
+            <div class="chat-header">
+
+                🤖 International Student AI
+
+                <span>
+                    ● Online
+                </span>
+
+            </div>
+
+
+            <!-- Chat Messages -->
+
+            <div
+                id="chat-box"
+                class="chat-box">
+
+                <div class="ai-message">
+
+                    Hello! 👋 How can I help you today?
+
+                </div>
+
+            </div>
+
+
+            <!-- Chat Input -->
+
+            <div class="chat-input">
+
+                <input
+                    type="text"
+                    id="user-question"
+                    placeholder="Ask a question..."
+                    onkeydown="handleEnter(event)"
+                >
+
+                <button onclick="sendMessage()">
+                    Send
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>
+            🌏 International Student Hub
+        </h3>
+
+        <p>
+            Making student life in Korea easier.
+        </p>
+
+        <p class="copyright">
+            Capstone Design 1 | Team Vertex
+        </p>
+
+    </footer>
+
+
+    <!-- ================= LOGIN MODAL ================= -->
+
+    <div
+        id="login-modal"
+        class="modal">
+
+
+        <div class="login-box">
+
+
+            <!-- Close Button -->
+
+            <button
+                class="close-btn"
+                onclick="closeLogin()">
+
+                ×
+
+            </button>
+
+
+            <h2>
+                Student Login
+            </h2>
+
+            <p>
+                Sign in to your International
+                Student Hub account.
+            </p>
+
+
+            <!-- EMAIL -->
+
+            <label for="email">
+                Email Address
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your university email"
+                autocomplete="email"
+            >
+
+
+            <!-- PASSWORD -->
+
+            <label for="password">
+                Password
+            </label>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+            >
+
+
+            <!-- UNIVERSITY -->
+
+            <label for="university">
+                University
+            </label>
+
+            <select id="university">
+
+                <option value="">
+                    Select your university
+                </option>
+
+                <option value="kyungsung">
+                    Kyungsung University
+                </option>
+
+                <option value="pusan">
+                    Pusan National University
+                </option>
+
+                <option value="dong-a">
+                    Dong-A University
+                </option>
+
+                <option value="other">
+                    Other
+                </option>
+
+            </select>
+
+
+            <!-- LOGIN BUTTON -->
+
+            <button
+                class="login-btn"
+                onclick="login()">
+
+                Login
+
+            </button>
+
+
+            <!-- Login Message -->
+
+            <p id="login-message"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
