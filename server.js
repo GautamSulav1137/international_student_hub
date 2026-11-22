@@ -130,7 +130,7 @@ ${question}
 // START SERVER
 // ========================================
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
 
     console.log(
         `International Student Hub running at http://localhost:${PORT}`
