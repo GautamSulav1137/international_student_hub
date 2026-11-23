@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>International Student Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                🌏 International Student Hub
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#student-info">Student Information</a></li>
+                <li><a href="#language">Language Assistant</a></li>
+                <li><a href="#ai-assistant">AI Assistant</a></li>
+            </ul>
+
+            <div class="nav-user">
+                <span id="welcome-user"></span>
+
+                <button class="login-btn" onclick="logout()">
+                    Logout
+                </button>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- HOME SECTION -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>
+                Welcome to International Student Hub
+            </h1>
+
+            <p>
+                Your companion for studying and living in South Korea.
+                Find useful information, communicate confidently,
+                and make your student life easier.
+            </p>
+
+            <button onclick="scrollToSection('student-info')">
+                Explore Student Information
+            </button>
+
+        </div>
+
+        <div class="hero-card">
+
+            <h2>Welcome, International Students! 🌏</h2>
+
+            <p>
+                Starting a new life in another country can be challenging.
+                International Student Hub brings useful resources
+                together in one place.
+            </p>
+
+            <p>
+                Explore university information, daily life resources,
+                Korean expressions, and AI assistance.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- STUDENT INFORMATION SECTION -->
+
+    <section class="section" id="student-info">
+
+        <div class="section-heading">
+
+            <h2>Student Information</h2>
+
+            <p>
+                Find useful information and resources for your
+                everyday life in South Korea.
+            </p>
+
+        </div>
+
+
+        <div class="info-grid">
+
+            <!-- UNIVERSITY -->
+
+            <div class="info-card">
+
+                <div class="card-icon">🎓</div>
+
+                <h3>University</h3>
+
+                <p>
+                    Information about university life,
+                    academic resources, and student services.
+                </p>
+
+                <button onclick="showInfo('university')">
+                    Learn More
+                </button>
+
+            </div>
+
+
+            <!-- WORK -->
+
+            <div class="info-card">
+
+                <div class="card-icon">💼</div>
+
+                <h3>Part-time Work</h3>
+
+                <p>
+                    Learn about part-time employment,
+                    workplace communication, and useful resources.
+                </p>
+
+                <button onclick="showInfo('work')">
+                    Learn More
+                </button>
+
+            </div>
+
+
+            <!-- HOUSING -->
+
+            <div class="info-card">
+
+                <div class="card-icon">🏠</div>
+
+                <h3>Housing</h3>
+
+                <p>
+                    Explore accommodation information,
+                    housing options, and useful living resources.
+                </p>
+
+                <button onclick="showInfo('housing')">
+                    Learn More
+                </button>
+
+            </div>
+
+
+            <!-- RESTAURANT -->
+
+            <div class="info-card">
+
+                <div class="card-icon">🍜</div>
+
+                <h3>Restaurants</h3>
+
+                <p>
+                    Discover restaurant information,
+                    food options, and useful Korean food expressions.
+                </p>
+
+                <button onclick="showInfo('restaurant')">
+                    Learn More
+                </button>
+
+            </div>
+
+
+            <!-- HOSPITAL -->
+
+            <div class="info-card">
+
+                <div class="card-icon">🏥</div>
+
+                <h3>Hospitals</h3>
+
+                <p>
+                    Find helpful information about healthcare,
+                    hospitals, and medical services.
+                </p>
+
+                <button onclick="showInfo('hospital')">
+                    Learn More
+                </button>
+
+            </div>
+
+
+            <!-- BANK -->
+
+            <div class="info-card">
+
+                <div class="card-icon">🏦</div>
+
+                <h3>Banking</h3>
+
+                <p>
+                    Learn about banking services,
+                    account information, and everyday transactions.
+                </p>
+
+                <button onclick="showInfo('bank')">
+                    Learn More
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- LANGUAGE ASSISTANT -->
+
+    <section class="section language-section" id="language">
+
+        <div class="section-heading">
+
+            <h2>Language Assistant</h2>
+
+            <p>
+                Learn useful Korean expressions for everyday
+                situations in South Korea.
+            </p>
+
+        </div>
+
+
+        <div class="language-container">
+
+            <div class="language-categories">
+
+                <button onclick="selectCategory('university')">
+                    🎓 University
+                </button>
+
+                <button onclick="selectCategory('restaurant')">
+                    🍜 Restaurant
+                </button>
+
+                <button onclick="selectCategory('workplace')">
+                    💼 Workplace
+                </button>
+
+                <button onclick="selectCategory('housing')">
+                    🏠 Housing
+                </button>
+
+                <button onclick="selectCategory('hospital')">
+                    🏥 Hospital
+                </button>
+
+                <button onclick="selectCategory('bank')">
+                    🏦 Bank
+                </button>
+
+            </div>
+
+
+            <div class="language-results">
+
+                <h3>Useful Korean Expressions</h3>
+
+                <p>
+                    Select a category to see useful Korean phrases
+                    with their English meanings.
+                </p>
+
+                <div id="language-content">
+
+                    <p>
+                        Choose a category to get started.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- AI ASSISTANT -->
+
+    <section class="section ai-section" id="ai-assistant">
+
+        <div class="section-heading">
+
+            <h2>AI Assistant</h2>
+
+            <p>
+                Have questions about studying or living in South Korea?
+                Ask our AI Assistant.
+            </p>
+
+        </div>
+
+
+        <div class="chat-container">
+
+            <div class="chat-header">
+
+                <h3>🤖 International Student AI Assistant</h3>
+
+                <p>
+                    Ask questions and get helpful information.
+                </p>
+
+            </div>
+
+
+            <div id="chat-box" class="chat-box">
+
+                <div class="bot-message">
+                    Hello! Welcome to International Student Hub.
+                    How can I help you today?
+                </div>
+
+            </div>
+
+
+            <div class="chat-input-area">
+
+                <input type="text" id="user-input" placeholder="Ask something about student life in Korea..."
+                    onkeydown="handleEnter(event)">
+
+                <button onclick="sendMessage()">
+                    Send
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- INFORMATION POPUP -->
+
+    <div id="info-modal" class="info-modal">
+
+        <div class="info-modal-content">
+
+            <button class="close-modal" onclick="closeInfo()" aria-label="Close">
+                &times;
+            </button>
+
+            <h2 id="info-title">
+                Information
+            </h2>
+
+            <div id="info-content"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h3>🌏 International Student Hub</h3>
+
+            <p>
+                Supporting international students
+                studying and living in South Korea.
+            </p>
+
+            <p>
+                Capstone Design 1 | Team Vertex
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
