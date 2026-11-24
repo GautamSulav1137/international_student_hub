@@ -297,18 +297,24 @@ app.post("/api/auth/login", async (req, res) => {
         });
     }
 });
+//GET LOGGED IN STUDENT INFORMATION
 
-// ========================================
-// GET LOGGED-IN STUDENT
-// ========================================
-
-app.get("/api/auth/me", requireAuth, async (req, res) => {
+app.get("/api/auth/me", async (req, res) => {
     try {
+
+        // Check whether a student is logged in
+        if (!req.session.studentId) {
+            return res.status(401).json({
+                error: "Not logged in."
+            });
+        }
+
         const student = await Student.findById(
             req.session.studentId
         ).select("name email university");
 
         if (!student) {
+
             req.session.destroy(() => { });
 
             return res.status(401).json({
@@ -316,18 +322,21 @@ app.get("/api/auth/me", requireAuth, async (req, res) => {
             });
         }
 
-        res.json({
+        return res.json({
             student
         });
 
     } catch (error) {
+
         console.error("Student information error:", error);
 
-        res.status(500).json({
+        return res.status(500).json({
             error: "Could not load student information."
         });
+
     }
 });
+
 
 // ========================================
 // LOGOUT
